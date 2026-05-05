@@ -7,7 +7,6 @@ import webbrowser
 import requests
 
 def check_dependencies():
-    """Ensure required system binaries are installed."""
     dependencies = {
         'slurp': 'slurp (Wayland region selector)',
         'grim': 'grim (Wayland screenshot tool)',
@@ -32,7 +31,6 @@ def check_dependencies():
         sys.exit(1)
 
 def take_screenshot(tmp_path):
-    """Uses slurp and grim to capture a region of the screen."""
     print("Select a region to search...")
     cmd = f'grim -g "$(slurp)" "{tmp_path}"'
     result = subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
@@ -41,7 +39,6 @@ def take_screenshot(tmp_path):
         sys.exit(0)
 
 def copy_to_clipboard(tmp_path):
-    """Copies the cropped image to wl-clipboard."""
     try:
         with open(tmp_path, 'rb') as f:
             subprocess.run(['wl-copy', '-t', 'image/png'], stdin=f)
@@ -49,10 +46,6 @@ def copy_to_clipboard(tmp_path):
         pass
 
 def upload_and_get_lens_url(image_path):
-    """
-    Uploads the screenshot anonymously to Imgur's API and returns 
-    the direct, official Google Lens search target string.
-    """
     print("Uploading selection anonymously to Imgur...")
     
     # Standard open client ID used globally for open-source screenshot integrations
@@ -78,7 +71,6 @@ def upload_and_get_lens_url(image_path):
         sys.exit(1)
 
 def open_browser(url):
-    """Attempts to open Chromium specifically, falling back to system default."""
     try:
         print("Opening Google Lens results in Chromium...")
         subprocess.Popen(['chromium', url], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
