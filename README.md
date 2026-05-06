@@ -1,6 +1,6 @@
 # lens-shot
 
-A lightweight, native Wayland utility for Arch Linux that lets you select a screen region, automatically copy it to your clipboard, and instantly launch a Google Lens reverse-image search in Chromium.
+A lightweight, native Wayland utility for Arch Linux that lets you select a screen region, automatically copy it to your clipboard, and instantly launch a Google Lens reverse-image search in Web Browser.
 
 Bypasses strict cross-origin and account verification security walls by cleanly routing image payloads via an anonymous API endpoint.
 
