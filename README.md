@@ -7,7 +7,7 @@ Bypasses strict cross-origin and account verification security walls by cleanly 
 ## Features
 * **Region Selection:** Smooth, interactive screen cropping using `slurp`.
 * **Clipboard Sync:** Copies the cropped region to `wl-clipboard` in the background.
-* **Instant Search:** Uploads the crop securely and opens the results directly in Chromium.
+* **Instant Search:** Uploads the crop securely and opens the results directly in Web Browser.
 * **Dual-Layer Fail-Safe:** Verifies system dependencies at runtime with clean terminal alerts if anything is missing.
 
 ---
