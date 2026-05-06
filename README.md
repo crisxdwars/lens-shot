@@ -18,8 +18,7 @@ If installed via the AUR, these dependencies will be pulled automatically. If ru
 
 * **Compositor Utilities:** `grim`, `slurp`, `wl-clipboard`
 * **Python Environment:** `python`, `python-requests`
-* **Browser:** `chromium` (Falls back to system default if not found)
 
 Install them via pacman:
 ```bash
-sudo pacman -S grim slurp wl-clipboard python python-requests chromium
+sudo pacman -S grim slurp wl-clipboard python python-requests
